@@ -1,0 +1,22 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cakeproject-dev-104643-authRole",
+      "UnauthRoleArn": "arn:aws:iam::576899046152:role/amplify-cakeproject-dev-104643-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::576899046152:role/amplify-cakeproject-dev-104643-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cakeproject-dev-104643-deployment",
+      "UnauthRoleName": "amplify-cakeproject-dev-104643-unauthRole",
+      "StackName": "amplify-cakeproject-dev-104643",
+      "StackId": "arn:aws:cloudformation:us-east-1:576899046152:stack/amplify-cakeproject-dev-104643/ae1dfce0-53aa-11ed-b38e-12050885f037",
+      "AmplifyAppId": "d3lr1ykxn3pdmu"
+    },
+    "categories": {
+      "function": {
+        "cakeListRecipes": {
+          "recipeId": "0"
+        }
+      }
+    }
+  }
+}
