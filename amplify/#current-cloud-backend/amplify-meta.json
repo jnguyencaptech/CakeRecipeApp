@@ -1,15 +1,47 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-cakeproject-dev-104643-authRole",
-      "UnauthRoleArn": "arn:aws:iam::576899046152:role/amplify-cakeproject-dev-104643-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::576899046152:role/amplify-cakeproject-dev-104643-authRole",
+      "AuthRoleName": "amplify-cakeproject-main-65728-authRole",
+      "UnauthRoleArn": "arn:aws:iam::576899046152:role/amplify-cakeproject-main-65728-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::576899046152:role/amplify-cakeproject-main-65728-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-cakeproject-dev-104643-deployment",
-      "UnauthRoleName": "amplify-cakeproject-dev-104643-unauthRole",
-      "StackName": "amplify-cakeproject-dev-104643",
-      "StackId": "arn:aws:cloudformation:us-east-1:576899046152:stack/amplify-cakeproject-dev-104643/ae1dfce0-53aa-11ed-b38e-12050885f037",
+      "DeploymentBucketName": "amplify-cakeproject-main-65728-deployment",
+      "UnauthRoleName": "amplify-cakeproject-main-65728-unauthRole",
+      "StackName": "amplify-cakeproject-main-65728",
+      "StackId": "arn:aws:cloudformation:us-east-1:576899046152:stack/amplify-cakeproject-main-65728/16e52ae0-6fb3-11ed-a7c5-0e5eefbe3603",
       "AmplifyAppId": "d3lr1ykxn3pdmu"
+    }
+  },
+  "api": {
+    "CakeProject": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "iqljz2znxreutc3prlpexnoj3y",
+        "GraphQLAPIEndpointOutput": "https://vs5i7mnhwbbdfhhxr3e4kxrjnu.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-nsp6vxq5abfubnneswxzm7d2he"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-01-17T04:34:52.647Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cakeproject-main-65728-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiCakeProject"
+      },
+      "lastPushDirHash": "FKVkMbw58ximrRZpeaaRLS2rRXI="
     }
   }
 }

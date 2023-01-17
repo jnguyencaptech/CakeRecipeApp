@@ -1,0 +1,9 @@
+type CakeRecipe @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  recipeOwner: String
+  ownerEmail: AWSEmail
+  recipeName: String
+  ingredients: AWSJSON
+  description: String
+}
+ 

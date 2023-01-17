@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Amplify, API, graphqlOperation } from "aws-amplify";
+import { CakeRecipeCreateForm, CakeRecipeUpdateForm } from "./ui-components";
+import awsconfig from "./aws-exports";
+import { queryRecipe } from "./recipeHelper/api";
+Amplify.configure(awsconfig);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='RecipeApp'>
+        <h1>Input Form</h1>
+        <CakeRecipeCreateForm />
+      </div>
+      <div className='RecipeApps'>
+        <h1>Update Form</h1>
+        <CakeRecipeUpdateForm CakeRecipe={queryRecipe(0)} />
+      </div>
+    </>
   );
 }
 

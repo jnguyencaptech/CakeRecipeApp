@@ -1,5 +1,5 @@
 {
-  "Description": "Root Stack for AWS Amplify CLI",
+  "Description": "Root Stack for AWS Amplify Console",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "DeploymentBucketName": {
@@ -149,6 +149,26 @@
         },
         "RoleName": {
           "Ref": "UnauthRoleName"
+        }
+      }
+    },
+    "apiCakeProject": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-cakeproject-main-65728-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "CakeProject",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "S3DeploymentBucket": "amplify-cakeproject-main-65728-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/8db3ce00a5ba031b27115f1a2d9ca6b9208c8ddc",
+          "env": "main"
         }
       }
     }
